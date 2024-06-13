@@ -1,0 +1,85 @@
+                                <option value="" disabled selected>Select Shift</option>
+                                <option value="morning">Morning</option>
+                                <option value="day">Day</option>
+                                <option value="evening">Evening</option>
+                                <option value="night">Night</option>
+
+
+                                <option value="" disabled selected>Select Seat Type</option>
+                                <option value="window">Window Seat</option>
+                                <option value="aisle">Aisle Seat</option>
+                                <option value="middle">Middle Seat</option>
+                                <option value="emergency-exit">Emergency Exit Seat</option>
+                                <option value="bulkhead">Bulkhead Seat</option>
+                                <option value="front-row">Front Row Seat</option>
+                                <option value="rear-row">Rear Row Seat</option>
+
+
+
+                                <option value="" disabled selected>Select Arrival City</option>
+                                <option value="Kathmandu">Kathmandu</option>
+                                <option value="Pokhara">Pokhara</option>
+                                <option value="Biratnagar">Biratnagar</option>
+                                <option value="Lalitpur">Lalitpur</option>
+                                <option value="Bhaktapur">Bhaktapur</option>
+                                <option value="Bharatpur">Bharatpur</option>
+                                <option value="Hetauda">Hetauda</option>
+                                <option value="Janakpur">Janakpur</option>
+                                <option value="Dharan">Dharan</option>
+                                <option value="Butwal">Butwal</option>
+                                <option value="Birgunj">Birgunj</option>
+                                <option value="Nepalgunj">Nepalgunj</option>
+                                <option value="Dhangadhi">Dhangadhi</option>
+                                <option value="Bhairahawa">Bhairahawa</option>
+                                <option value="Itahari">Itahari</option>
+                                <option value="Triyuga">Triyuga</option>
+                                <option value="Bhadrapur">Bhadrapur</option>
+                                <option value="Ghorahi">Ghorahi</option>
+                                <option value="Tulsipur">Tulsipur</option>
+                                <option value="Tikapur">Tikapur</option>
+                                <option value="Kalaiya">Kalaiya</option>
+                                <option value="Putalibazar">Putalibazar</option>
+                                <option value="Rajbiraj">Rajbiraj</option>
+                                <option value="Jaleshwar">Jaleshwar</option>
+                                <option value="Gaighat">Gaighat</option>
+                                <option value="Tansen">Tansen</option>
+                                <option value="Inaruwa">Inaruwa</option>
+                                <option value="Khandbari">Khandbari</option>
+                                <option value="Baglung">Baglung</option>
+                                <option value="Kohalpur">Kohalpur</option>
+                                <option value="Gulariya">Gulariya</option>
+                                <option value="Siddharthanagar">Siddharthanagar</option>
+                                <option value="Jumla">Jumla</option>
+                                <option value="Damauli">Damauli</option>
+                                <option value="Salyan">Salyan</option>
+                                <option value="Lamahi">Lamahi</option>
+                                <option value="Dadeldhura">Dadeldhura</option>
+                                <option value="Phidim">Phidim</option>
+                                <option value="Waling">Waling</option>
+                                <option value="Lahan">Lahan</option>
+                                <option value="Kirtipur">Kirtipur</option>
+                                <option value="Banepa">Banepa</option>
+                                <option value="Dhulikhel">Dhulikhel</option>
+                                <option value="Panauti">Panauti</option>
+                                <option value="Dipayal Silgadhi">Dipayal Silgadhi</option>
+                                <option value="Tulsipur">Tulsipur</option>
+                                <option value="Amargadhi">Amargadhi</option>
+
+
+
+
+
+                                <option value="" disabled selected>Select ID Type</option>
+                                <option value="Passport">Passport</option>
+                                <option value="Driving License">Driving License</option>
+                                <option value="National ID">National ID</option>
+                                <option value="Voter ID">Voter ID</option>
+
+
+
+
+                                <option value="" disabled selected>Select Issued Country</option>
+                                <option value="Nepal">Nepal</option>
+                                <option value="India">India</option>
+                                <option value="China">China</option>
+                                <option value="USA">USA</option>

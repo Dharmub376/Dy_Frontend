@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhusal Tours || Your Journey Begins Here</title>
+    <link rel="shortcut icon" href="assets/img/vlogo.png" type="image/png">
+    <!--==================== Google Fonts =======================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!--==================== Swiper CSS =======================-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!--================== Remixicons CSS =====================-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--==================== Main CSS =======================-->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+
+
+</head>
+
+<body>
+    <!--==================== Header =======================-->
+    <header id="header" class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__brand">
+                <img src="assets/img/vlogo.png" width="80px" alt="Logo">
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link nav__link--active">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#reserve" class="nav__link">Reserve</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#routes" class="nav__link">Routes</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#discover" class="nav__link">Discover</a>
+                    </li>
+                    <li class="nav__item">
+                        <a id="sign-in-btn" class="btn btn--primary">Sign in</a>
+                    </li>
+                </ul>
+                <span class="nav__close">
+                    <i id="nav-close" class="ri-close-line"></i>
+                </span>
+            </div>
+            <span class="nav__open">
+                <i id="nav-open" class="ri-menu-5-line"></i>
+            </span>
+        </nav>
+    </header>
+
+    <!--==================== Sign In / Sign Up Modal =======================-->
+    <div id="auth-modal" class="auth-modal">
+        <div class="auth-modal-content">
+            <span id="auth-modal-close" class="auth-modal-close">&times;</span>
+            <h2 id="form-title">Sign In</h2>
+            <form id="auth-form" action="/login" method="post">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group" id="extra-fields" style="display: none;">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group" id="confirm-password-group" style="display: none;">
+                    <label for="confirmpassword">Confirm Password</label>
+                    <input type="password" id="confirmpassword" name="confirmpassword">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn--primary" id="submit-btn">Sign In</button>
+                </div>
+                <div class="form-group">
+                    <a href="#" id="toggle-link" class="toggle-link">Don't have an account? Sign up</a>
+                </div>
+            </form>
+            <div class="form-group">
+                <p>or continue with</p>
+                <div class="social-login">
+                    <button class="btn btn--social"><img src="assets/img/google.png" alt="Google" /> Continue with
+                        Google</button>
+                    <button class="btn btn--social"><img src="assets/img/facebook.png" alt="Facebook" /> Continue with
+                        Facebook</button>
+                    <button class="btn btn--social"><img src="assets/img/x.png" alt="Twitter" /> Continue with
+                        Twitter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--==================== Main =======================-->
+    <main class="main">
+
+        <!--==================== Home =======================-->
+        <section id="home" class="home">
+            <div class="d-grid home__wrapper container">
+                <div class="home__content">
+                    <h1 class="home__title">Hassle-Free <span>Bus Tour </span>Across Country</h1>
+                    <p class="home__description">Experience the convenience of bus tours with Bhusal Tours. Choose from
+                        a wide range of routes, compare prices, and travel comfortably us.</p>
+                    <a href="#reserve" class="btn btn--primary">
+                        Book Now
+                    </a>
+                </div>
+                <img src="assets/img/banner.png" alt="" class="home__img">
+            </div>
+        </section>
+
+        <!--==================== About =======================-->
+        <section id="about" class="about section">
+            <div class="section__header">
+                <span class="section__subtitle">About</span>
+                <h2 class="section__title">Know About Us</h2>
+            </div>
+            <div class="d-grid about__wrapper container">
+                <div class="about__content">
+                    <h2 class="section__title">Travel, enjoy and explore new places with us
+                    </h2>
+                    <p class="about__description">Felis pellentesque a enim tristique lobortis nulla bibendum. Pulvinar
+                        ornare in pharetra adipiscing. Sociis diam quis
+                        justo turpis id sed et laoreet. Bibendum et amet sed ultrices eleifend. Aliquam scelerisque mi
+                        sit id adipiscing.</p>
+                    <a href="#reserve" class="btn btn--primary">Know More</a>
+                </div>
+                <img src="assets/img/about.png" alt="" class="about__img">
+            </div>
+        </section>
+
+        <!--==================== reserve =======================-->
+        <section id="reserve" class="reserve section">
+            <div class="section__header">
+                <span class="section__subtitle">Reservation</span>
+                <h2 class="section__title">Reserve Now</h2>
+            </div>
+            <div class="container1">
+                <form id="reservation-form" class="form" action="/reserve" method="POST">
+                    <!-- Form fields -->
+                    <div class="column">
+                        <div class="input-box">
+                            <label for="first-name">First Name<span class="required-dot">*</span></label>
+                            <input type="text" id="first-name" name="firstName" placeholder="Enter First Name"
+                                required />
+                        </div>
+                        <div class="input-box">
+                            <label for="middle-name">Middle Name</label>
+                            <input type="text" id="middle-name" name="middleName" placeholder="Enter Middle Name" />
+                        </div>
+                        <div class="input-box">
+                            <label for="last-name">Last Name<span class="required-dot">*</span></label>
+                            <input type="text" id="last-name" name="lastName" placeholder="Enter Last Name" required />
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="input-box">
+                            <label for="contact-number">Contact Number<span class="required-dot">*</span></label>
+                            <input type="text" id="contact-number" name="contactNumber"
+                                placeholder="Enter Contact Number" required />
+                        </div>
+                        <div class="input-box">
+                            <label for="email">Email Address<span class="required-dot">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Enter Email Address" required />
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="input-box">
+                            <label for="departure-city">Departure City<span class="required-dot">*</span></label>
+                            <select id="departure-city" name="departureCity" required>
+                                <option value="" disabled selected>Select Issued Country</option>
+                                <option value="Nepal">Nepal</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <label for="departure-date">Departure Date<span class="required-dot">*</span></label>
+                            <input type="date" id="departure-date" name="departureDate" required />
+                        </div>
+                        <div class="input-box">
+                            <label for="departure-shift">Departure Shift<span class="required-dot">*</span></label>
+                            <select id="departure-shift" name="departureShift" required>
+                                <option value="" disabled selected>Select Issued Country</option>
+                                <option value="Nepal">Nepal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="input-box">
+                            <label for="seat-type">Seat Type</label>
+                            <select id="seat-type" name="seatType">
+                                <option value="" disabled selected>Select Issued Country</option>
+                                <option value="Nepal">Nepal</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <label for="arrival-city">Arrival City<span class="required-dot">*</span></label>
+                            <select id="arrival-city" name="arrivalCity" required>
+                                <option value="" disabled selected>Select Issued Country</option>
+                                <option value="Nepal">Nepal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="input-box">
+                            <label for="id-type">ID Type<span class="required-dot">*</span></label>
+                            <select id="id-type" name="idType" required>
+                                <option value="" disabled selected>Select Issued Country</option>
+                                <option value="Nepal">Nepal</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <label for="id-number">ID Number<span class="required-dot">*</span></label>
+                            <input type="text" id="id-number" name="idNumber" placeholder="Enter ID Number" required />
+                        </div>
+                        <div class="input-box">
+                            <label for="country-issuance">Country of Issuance<span class="required-dot">*</span></label>
+                            <select id="country-issuance" name="countryIssuance" required>
+                                <option value="" disabled selected>Select Issued Country</option>
+                                <option value="Nepal">Nepal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="tac">
+                        <input type="checkbox" class="ui-checkbox" required> I accept the <a href="#"><span
+                                class="tactext">terms and conditions.</span></a>
+                        <button type="submit" id="submitBtn">Proceed To Payment</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!--================ routes ===================-->
+        <section id="routes" class="routes section">
+            <div class="section__header">
+                <span class="section__subtitle">routes</span>
+                <h2 class="section__title">Hot Routes</h2>
+            </div>
+            <div class="routes__wrapper container swiper">
+                <div class="swiper-wrapper">
+                    <!--======== routes 1 ===========-->
+                    <div class="routes__item swiper-slide">
+                        <img src="assets/img/lumktm.png" alt="" class="routes__img">
+                        <div class="routes__info">
+                            <p class="routes__country">Lumbini</p>
+                            <h3 class="routes__name">Kathmandu</h3>
+                        </div>
+                    </div>
+                    <!--======== routes 2 ===========-->
+                    <div class="routes__item swiper-slide">
+                        <img src="assets/img/pokdha.png" alt="" class="routes__img">
+                        <div class="routes__info">
+                            <p class="routes__country">Pokhara</p>
+                            <h3 class="routes__name">Dhangadi</h3>
+                        </div>
+                    </div>
+                    <!--======== routes 3 ===========-->
+                    <div class="routes__item swiper-slide">
+                        <img src="assets/img/kkkdha.png" alt="" class="routes__img">
+                        <div class="routes__info">
+                            <p class="routes__country">Kakkarbhitta</p>
+                            <h3 class="routes__name">Dharan</h3>
+                        </div>
+                    </div>
+                    <!--======== routes 4 ===========-->
+                    <div class="routes__item swiper-slide">
+                        <img src="assets/img/chisur.png" alt="" class="routes__img">
+                        <div class="routes__info">
+                            <p class="routes__country">Chitwan</p>
+                            <h3 class="routes__name">Surkhet</h3>
+                        </div>
+                    </div>
+                    <!--======== routes 5 ===========-->
+                    <div class="routes__item swiper-slide">
+                        <img src="assets/img/janmah.png" alt="" class="routes__img">
+                        <div class="routes__info">
+                            <p class="routes__country">Janakpur</p>
+                            <h3 class="routes__name">Mahendranagar</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--========= Swiper navigation buttons ========-->
+                <div class="swiper__navigation">
+                    <div class="swiper__prev swiper__button">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </div>
+                    <div class="swiper__next swiper__button">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== Video =======================-->
+        <section class="video section">
+            <div class="section__header">
+                <span class="section__subtitle">Tour</span>
+                <h2 class="section__title">Bus Journey</h2>
+            </div>
+            <div class="d-grid video__wrapper container">
+                <div class="video__content">
+                    <video id="video-tour" class="video__tour">
+                        <source src="assets/video/bus.mp4" type="video/mp4">
+                    </video>
+                    <div class="video__info">
+                        <button id="video-btn" class="video__btn">
+                            <i id="video-icon" class="ri-play-fill"></i>
+                        </button>
+                        <div class="video__info-wrapper">
+                            <span class="video__info-title">
+                                Bus Journey
+                            </span>
+                            <p class="video__info-description">
+                                Watch Video
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== Discover =======================-->
+        <section id="discover" class="discover section">
+            <div class="section__header">
+                <span class="section__subtitle">Plan your tour now</span>
+                <h2 class="section__title">Beautiful places</h2>
+            </div>
+            <div class="d-grid discover__wrapper container">
+                <!--========== discover 1 ===========-->
+                <div class="discover__item">
+                    <div class="discover__img-wrapper">
+                        <img src="/public/assets/img/pachpokhari.png" alt="" class="discover__img">
+                        <span class="discover__price">
+                            Rs.90K
+                        </span>
+                    </div>
+                    <div class="discover__info">
+                        <h3 class="discover__name">
+                            Panch Pokhari</h3>
+                        <p class="discover__tour">
+                            Pickup From Kathmandu
+                        </p>
+                        <p class="discover__duration">
+                            10 Days
+                        </p>
+                        <a href="javascript:void(0)" class="discover__btn">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                <!--========== discover 2 ===========-->
+                <div class="discover__item">
+                    <div class="discover__img-wrapper">
+                        <img src="assets/img/khaptad.png" alt="" class="discover__img">
+                        <span class="discover__price">
+                            Rs.80K
+                        </span>
+                    </div>
+                    <div class="discover__info">
+                        <h3 class="discover__name">
+                            Khaptad NP</h3>
+                        <p class="discover__tour">
+                            Pickup From Bharatpur
+                        </p>
+                        <p class="discover__duration">
+                            8 Days
+                        </p>
+                        <a href="javascript:void(0)" class="discover__btn">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                <!--========== discover 3 ===========-->
+                <div class="discover__item">
+                    <div class="discover__img-wrapper">
+                        <img src="assets/img/barunvally.jpg" alt="" class="discover__img">
+                        <span class="discover__price">
+                            Rs.50k
+                        </span>
+                    </div>
+                    <div class="discover__info">
+                        <h3 class="discover__name">Barun Valley</h3>
+                        <p class="discover__tour">
+                            Pickup From Butwal
+                        </p>
+                        <p class="discover__duration">
+                            5 Days
+                        </p>
+                        <a href="javascript:void(0)" class="discover__btn">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== Offer =======================-->
+        <section class="offer section">
+            <div class="d-grid offer__wrapper container">
+                <div class="offer__content">
+                    <span class="offer__subtitle">Special Offer</span>
+                    <p class="offer__duration">Starting from Rs.19999</p>
+                    <h3 class="offer__title">All Nepal Tour</h3>
+                    <p class="offer__description">
+                        Traveling with the family has never been more affordable! Take advantage of our family-friendly deals and enjoy discounted fares for everyone. Pack your bags and hit the road with Bhusal Tours!.
+                    </p>
+                    <a href="javascript:void" class="btn btn--primary">Get Offer</a>
+                </div>
+                <img src="assets/img/specialoffer.png" alt="" class="offer__img">
+            </div>
+        </section>
+
+        <!--==================== Newsletter =======================-->
+        <section class="newsletter section">
+            <div class="d-grid newsletter__wrapper container">
+                <div class="newsletter__content">
+                    <h2 class="newsletter__title">Subscribe to our newsletter</h2>
+                    <p class="newsletter__description">
+                        Receive exclusive offers, latest news, updates and discounts.
+                    </p>
+                </div>
+                <form class="newsletter__form">
+                    <div class="form__group">
+                        <input type="email" class="form__input" placeholder="Email Address" required>
+                        <button class="btn btn--primary">
+                            Subscribe
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== Footer =======================-->
+    <footer class="footer">
+        <div class="d-grid footer__wrapper container">
+            <div class="footer__content">
+                <img src="/public/assets/img/vlogo.png" width="100px" alt="">
+                <p class="footer__description">
+                    Bhusal Tours isn't just a bus service; it's a promise of convenience, reliability, and exceptional service. Join us on the road to adventure.
+                </p>
+                <div class="social">
+                    <ul class="social__list">
+                        <li class="social__item">
+                            <a href="javascriot:void(0)" class="social__link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="javascriot:void(0)" class="social__link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="javascriot:void(0)" class="social__link">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="javascriot:void(0)" class="social__link">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__content">
+                <h4 class="footer__title">Links</h4>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="#home" class="footer__link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#about" class="footer__link">
+                            About
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#reserve" class="footer__link">
+                            Reserve
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#routes" class="footer__link">
+                            routes
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#discover" class="footer__link">
+                            Discover
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h4 class="footer__title">Company</h4>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">
+                            Terms & Conditions
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h4 class="footer__title">Support</h4>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="#home" class="footer__link">
+                            Help & FAQs
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#about" class="footer__link">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer__copyright container">
+            Copyright © Bhusal Tours 2024. All Rights Reserved
+        </p>
+    </footer>
+
+    <!--==================== Scroll to top =======================-->
+    <a href="#" id="scrolltop" class="scrolltop">
+        <i class="ri-arrow-up-s-line"></i>
+    </a>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function () {
+            var formData = {
+                firstName: document.getElementById('first-name').value,
+                middleName: document.getElementById('Middle-name').value,
+                lastName: document.getElementById('last-name').value,
+                contactNumber: document.getElementById('contact-number').value,
+                email: document.getElementById('email').value,
+                departureCity: document.getElementById('departure-city').value,
+                departureDate: document.getElementById('departure-date').value,
+                departureShift: document.getElementById('departure-shift').value,
+                seatType: document.getElementById('seat-type').value,
+                arrivalCity: document.getElementById('arrival-city').value,
+                idType: document.getElementById('id-type').value,
+                idNumber: document.getElementById('id-number').value,
+                countryIssuance: document.getElementById('country-issuance').value
+            };
+
+            localStorage.setItem('formData', JSON.stringify(formData));
+            window.location.href = 'payment.html';
+        });
+    </script>
+
+
+    <!--==================== Swiper JS =======================-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!--==================== ScrollReveal =====================-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--==================== Main JS =======================-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/backend.js"></script>
+
+    <script>
+        // script.js
+
+        document.getElementById('sign-in-btn').addEventListener('click', function () {
+            const authModal = document.getElementById('auth-modal');
+            const mainContent = document.getElementById('main-content');
+            authModal.style.display = 'flex';
+            mainContent.classList.add('blurred');
+        });
+
+        document.getElementById('auth-modal-close').addEventListener('click', function () {
+            const authModal = document.getElementById('auth-modal');
+            const mainContent = document.getElementById('main-content');
+            authModal.style.display = 'none';
+            mainContent.classList.remove('blurred');
+        });
+
+        document.getElementById('toggle-link').addEventListener('click', function () {
+            const formTitle = document.getElementById('form-title');
+            const extraFields = document.getElementById('extra-fields');
+            const submitBtn = document.getElementById('submit-btn');
+            const toggleLink = document.getElementById('toggle-link');
+
+            if (formTitle.textContent === 'Sign In') {
+                formTitle.textContent = 'Sign Up';
+                extraFields.style.display = 'block';
+                submitBtn.textContent = 'Sign Up';
+                toggleLink.textContent = 'Already have an account? Sign in';
+            } else {
+                formTitle.textContent = 'Sign In';
+                extraFields.style.display = 'none';
+                submitBtn.textContent = 'Sign In';
+                toggleLink.textContent = 'Don\'t have an account? Sign up';
+            }
+        });
+        document.getElementById('auth-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const formTitle = document.getElementById('form-title').textContent;
+            const action = formTitle === 'Sign In' ? 'signin' : 'signup';
+
+            fetch(`/assets/php/authenticate.php?action=${action}`, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.href = 'dashboard.html'; // Redirect to dashboard on success
+                    } else {
+                        alert(data.message); // Display error message
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        });
+
+    </script>
+</body>
+
+</html>
