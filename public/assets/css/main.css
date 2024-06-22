@@ -347,6 +347,11 @@ body {
   position: relative;
 }
 
+.auth-modal-content h2{
+margin-bottom: 15px;
+text-align: center;
+}
+
 .auth-modal-close {
   position: absolute;
   right: 20px;

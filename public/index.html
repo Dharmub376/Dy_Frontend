@@ -51,7 +51,11 @@
                     <li class="nav__item">
                         <a href="#discover" class="nav__link">Discover</a>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item" id="user-info" style="display: none;">
+                        <img src="./assets/img/user.png" id="profile-picture" alt="Profile" class="profile-picture">
+                        <a href="#profile" class="nav__link nav__link--user" id="username"></a>
+                    </li>
+                    <li class="nav__item" id="sign-in-btn-container">
                         <a id="sign-in-btn" class="btn btn--primary">Sign in</a>
                     </li>
                 </ul>
@@ -69,8 +73,8 @@
     <div id="auth-modal" class="auth-modal">
         <div class="auth-modal-content">
             <span id="auth-modal-close" class="auth-modal-close">&times;</span>
-            <h2 id="form-title">Sign In</h2>
-            <form id="auth-form" action="/login" method="post">
+            <h2 id="form-title">Join With Us</h2>
+            <form id="auth-form" action="/api/auth/login" method="post">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
@@ -107,6 +111,9 @@
             </div>
         </div>
     </div>
+
+
+
 
 
     <!--==================== Main =======================-->
@@ -186,8 +193,54 @@
                         <div class="input-box">
                             <label for="departure-city">Departure City<span class="required-dot">*</span></label>
                             <select id="departure-city" name="departureCity" required>
-                                <option value="" disabled selected>Select Issued Country</option>
-                                <option value="Nepal">Nepal</option>
+                                <option value="" disabled selected>Select Departure City</option>
+                                <option value="Kathmandu">Kathmandu</option>
+                                <option value="Pokhara">Pokhara</option>
+                                <option value="Biratnagar">Biratnagar</option>
+                                <option value="Lalitpur">Lalitpur</option>
+                                <option value="Bhaktapur">Bhaktapur</option>
+                                <option value="Bharatpur">Bharatpur</option>
+                                <option value="Hetauda">Hetauda</option>
+                                <option value="Janakpur">Janakpur</option>
+                                <option value="Dharan">Dharan</option>
+                                <option value="Butwal">Butwal</option>
+                                <option value="Birgunj">Birgunj</option>
+                                <option value="Nepalgunj">Nepalgunj</option>
+                                <option value="Dhangadhi">Dhangadhi</option>
+                                <option value="Bhairahawa">Bhairahawa</option>
+                                <option value="Itahari">Itahari</option>
+                                <option value="Triyuga">Triyuga</option>
+                                <option value="Bhadrapur">Bhadrapur</option>
+                                <option value="Ghorahi">Ghorahi</option>
+                                <option value="Tulsipur">Tulsipur</option>
+                                <option value="Tikapur">Tikapur</option>
+                                <option value="Kalaiya">Kalaiya</option>
+                                <option value="Putalibazar">Putalibazar</option>
+                                <option value="Rajbiraj">Rajbiraj</option>
+                                <option value="Jaleshwar">Jaleshwar</option>
+                                <option value="Gaighat">Gaighat</option>
+                                <option value="Tansen">Tansen</option>
+                                <option value="Inaruwa">Inaruwa</option>
+                                <option value="Khandbari">Khandbari</option>
+                                <option value="Baglung">Baglung</option>
+                                <option value="Kohalpur">Kohalpur</option>
+                                <option value="Gulariya">Gulariya</option>
+                                <option value="Siddharthanagar">Siddharthanagar</option>
+                                <option value="Jumla">Jumla</option>
+                                <option value="Damauli">Damauli</option>
+                                <option value="Salyan">Salyan</option>
+                                <option value="Lamahi">Lamahi</option>
+                                <option value="Dadeldhura">Dadeldhura</option>
+                                <option value="Phidim">Phidim</option>
+                                <option value="Waling">Waling</option>
+                                <option value="Lahan">Lahan</option>
+                                <option value="Kirtipur">Kirtipur</option>
+                                <option value="Banepa">Banepa</option>
+                                <option value="Dhulikhel">Dhulikhel</option>
+                                <option value="Panauti">Panauti</option>
+                                <option value="Dipayal Silgadhi">Dipayal Silgadhi</option>
+                                <option value="Tulsipur">Tulsipur</option>
+                                <option value="Amargadhi">Amargadhi</option>
                             </select>
                         </div>
                         <div class="input-box">
@@ -197,8 +250,11 @@
                         <div class="input-box">
                             <label for="departure-shift">Departure Shift<span class="required-dot">*</span></label>
                             <select id="departure-shift" name="departureShift" required>
-                                <option value="" disabled selected>Select Issued Country</option>
-                                <option value="Nepal">Nepal</option>
+                                <option value="" disabled selected>Select Shift</option>
+                                <option value="morning">Morning</option>
+                                <option value="day">Day</option>
+                                <option value="evening">Evening</option>
+                                <option value="night">Night</option>
                             </select>
                         </div>
                     </div>
@@ -206,15 +262,67 @@
                         <div class="input-box">
                             <label for="seat-type">Seat Type</label>
                             <select id="seat-type" name="seatType">
-                                <option value="" disabled selected>Select Issued Country</option>
-                                <option value="Nepal">Nepal</option>
+                                <option value="" disabled selected>Select Seat Type</option>
+                                <option value="window">Window Seat</option>
+                                <option value="aisle">Aisle Seat</option>
+                                <option value="middle">Middle Seat</option>
+                                <option value="emergency-exit">Emergency Exit Seat</option>
+                                <option value="bulkhead">Bulkhead Seat</option>
+                                <option value="front-row">Front Row Seat</option>
+                                <option value="rear-row">Rear Row Seat</option>
                             </select>
                         </div>
                         <div class="input-box">
                             <label for="arrival-city">Arrival City<span class="required-dot">*</span></label>
                             <select id="arrival-city" name="arrivalCity" required>
-                                <option value="" disabled selected>Select Issued Country</option>
-                                <option value="Nepal">Nepal</option>
+                                <option value="" disabled selected>Select Arrival City</option>
+                                <option value="Kathmandu">Kathmandu</option>
+                                <option value="Pokhara">Pokhara</option>
+                                <option value="Biratnagar">Biratnagar</option>
+                                <option value="Lalitpur">Lalitpur</option>
+                                <option value="Bhaktapur">Bhaktapur</option>
+                                <option value="Bharatpur">Bharatpur</option>
+                                <option value="Hetauda">Hetauda</option>
+                                <option value="Janakpur">Janakpur</option>
+                                <option value="Dharan">Dharan</option>
+                                <option value="Butwal">Butwal</option>
+                                <option value="Birgunj">Birgunj</option>
+                                <option value="Nepalgunj">Nepalgunj</option>
+                                <option value="Dhangadhi">Dhangadhi</option>
+                                <option value="Bhairahawa">Bhairahawa</option>
+                                <option value="Itahari">Itahari</option>
+                                <option value="Triyuga">Triyuga</option>
+                                <option value="Bhadrapur">Bhadrapur</option>
+                                <option value="Ghorahi">Ghorahi</option>
+                                <option value="Tulsipur">Tulsipur</option>
+                                <option value="Tikapur">Tikapur</option>
+                                <option value="Kalaiya">Kalaiya</option>
+                                <option value="Putalibazar">Putalibazar</option>
+                                <option value="Rajbiraj">Rajbiraj</option>
+                                <option value="Jaleshwar">Jaleshwar</option>
+                                <option value="Gaighat">Gaighat</option>
+                                <option value="Tansen">Tansen</option>
+                                <option value="Inaruwa">Inaruwa</option>
+                                <option value="Khandbari">Khandbari</option>
+                                <option value="Baglung">Baglung</option>
+                                <option value="Kohalpur">Kohalpur</option>
+                                <option value="Gulariya">Gulariya</option>
+                                <option value="Siddharthanagar">Siddharthanagar</option>
+                                <option value="Jumla">Jumla</option>
+                                <option value="Damauli">Damauli</option>
+                                <option value="Salyan">Salyan</option>
+                                <option value="Lamahi">Lamahi</option>
+                                <option value="Dadeldhura">Dadeldhura</option>
+                                <option value="Phidim">Phidim</option>
+                                <option value="Waling">Waling</option>
+                                <option value="Lahan">Lahan</option>
+                                <option value="Kirtipur">Kirtipur</option>
+                                <option value="Banepa">Banepa</option>
+                                <option value="Dhulikhel">Dhulikhel</option>
+                                <option value="Panauti">Panauti</option>
+                                <option value="Dipayal Silgadhi">Dipayal Silgadhi</option>
+                                <option value="Tulsipur">Tulsipur</option>
+                                <option value="Amargadhi">Amargadhi</option>
                             </select>
                         </div>
                     </div>
@@ -222,8 +330,11 @@
                         <div class="input-box">
                             <label for="id-type">ID Type<span class="required-dot">*</span></label>
                             <select id="id-type" name="idType" required>
-                                <option value="" disabled selected>Select Issued Country</option>
-                                <option value="Nepal">Nepal</option>
+                                <option value="" disabled selected>Select ID Type</option>
+                                <option value="Passport">Passport</option>
+                                <option value="Driving License">Driving License</option>
+                                <option value="National ID">National ID</option>
+                                <option value="Voter ID">Voter ID</option>
                             </select>
                         </div>
                         <div class="input-box">
@@ -235,6 +346,9 @@
                             <select id="country-issuance" name="countryIssuance" required>
                                 <option value="" disabled selected>Select Issued Country</option>
                                 <option value="Nepal">Nepal</option>
+                                <option value="India">India</option>
+                                <option value="China">China</option>
+                                <option value="USA">USA</option>
                             </select>
                         </div>
                     </div>
@@ -347,7 +461,7 @@
                 <!--========== discover 1 ===========-->
                 <div class="discover__item">
                     <div class="discover__img-wrapper">
-                        <img src="/public/assets/img/pachpokhari.png" alt="" class="discover__img">
+                        <img src="./assets/img/pachpokhari.png" alt="" class="discover__img">
                         <span class="discover__price">
                             Rs.90K
                         </span>
@@ -420,7 +534,9 @@
                     <p class="offer__duration">Starting from Rs.19999</p>
                     <h3 class="offer__title">All Nepal Tour</h3>
                     <p class="offer__description">
-                        Traveling with the family has never been more affordable! Take advantage of our family-friendly deals and enjoy discounted fares for everyone. Pack your bags and hit the road with Bhusal Tours!.
+                        Traveling with the family has never been more affordable! Take advantage of our family-friendly
+                        deals and enjoy discounted fares for everyone. Pack your bags and hit the road with Bhusal
+                        Tours!.
                     </p>
                     <a href="javascript:void" class="btn btn--primary">Get Offer</a>
                 </div>
@@ -453,9 +569,10 @@
     <footer class="footer">
         <div class="d-grid footer__wrapper container">
             <div class="footer__content">
-                <img src="/public/assets/img/vlogo.png" width="100px" alt="">
+                <img src="./assets/img/vlogo.png" width="100px" alt="">
                 <p class="footer__description">
-                    Bhusal Tours isn't just a bus service; it's a promise of convenience, reliability, and exceptional service. Join us on the road to adventure.
+                    Bhusal Tours isn't just a bus service; it's a promise of convenience, reliability, and exceptional
+                    service. Join us on the road to adventure.
                 </p>
                 <div class="social">
                     <ul class="social__list">
@@ -586,6 +703,7 @@
     <!--==================== Main JS =======================-->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/backend.js"></script>
+    <script src="assets/js/auth.js"></script>
 
     <script>
         // script.js
